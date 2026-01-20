@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Precios FESICOL · Musicala (2026)</title>
+  <meta name="description" content="Servicios, descripción y precios Musicala para FESICOL (2026). Vista tipo tabla, clara y rápida." />
+  <meta name="color-scheme" content="light" />
+
+  <link rel="stylesheet" href="./styles.css" />
+
+  <!-- Ajustes puntuales SIN tocar styles.css -->
+  <style>
+    /* Header NO sticky (por si en algún momento styles.css lo vuelve sticky) */
+    .header{ position: static !important; top: auto !important; margin-top: 12px !important; }
+    /* Toolbar debajo del header */
+    .toolbar{ margin-top: 12px !important; }
+
+    /* Panel colapsable de filtros (si el CSS no lo trae por alguna razón) */
+    .filtersPanel{
+      border:1px solid var(--line);
+      border-radius: 16px;
+      background: rgba(255,255,255,.70);
+      box-shadow: var(--shadow2);
+      overflow: hidden;
+    }
+    .filtersPanel > summary{
+      list-style:none;
+      cursor:pointer;
+      padding: 10px 12px;
+      font-weight: 950;
+      color: rgba(15,23,42,.88);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      user-select:none;
+    }
+    .filtersPanel > summary::-webkit-details-marker{ display:none; }
+    .filtersPanel__hint{
+      font-size:12px;
+      font-weight:800;
+      color: rgba(91,100,122,.92);
+    }
+    .filtersPanel__body{
+      padding: 10px 12px 12px;
+      border-top:1px solid var(--line);
+    }
+
+    /* Para que la tabla no se sienta apretada */
+    .sectionHint{ max-width: 58ch; }
+
+    /* Accesibilidad (sr-only) */
+    .srOnly{
+      position:absolute !important;
+      width:1px;height:1px;
+      padding:0;margin:-1px;
+      overflow:hidden;clip:rect(0,0,0,0);
+      white-space:nowrap;border:0;
+    }
+  </style>
+</head>
+
+<body class="theme-light">
+  <a class="skip" href="#main">Saltar al contenido</a>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="wrap header__inner">
+      <div class="brand">
+        <div class="brand__row">
+          <img class="brand__logo" src="./logo.png" alt="Logo Musicala" onerror="this.style.display='none'"/>
+          <div class="brand__txt">
+            <div class="brand__kicker">ALIANZA FESICOL · MUSICALA</div>
+            <h1 class="brand__title">Servicios y tarifas (2026)</h1>
+            <p class="brand__sub">
+              Consulta rápida en formato <b>tabla</b>, con búsqueda y filtros por servicio.
+            </p>
+          </div>
+        </div>
+
+        <div class="badges">
+          <span class="badge" title="Se cargan los datos desde fesicol.json">
+            <span class="dot"></span> Actualizado desde <b>fesicol.json</b>
+          </span>
+          <span class="badge badge--soft" id="countBadge">Cargando…</span>
+          <span class="badge badge--soft" id="updatedAt" aria-live="polite"></span>
+        </div>
+      </div>
+
+      <div class="header__actions">
+        <button class="btn btn--soft" id="btnPrint" type="button" title="Imprimir o guardar PDF">
+          Imprimir / PDF
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="wrap main">
+
+    <!-- TOOLBAR -->
+    <section class="toolbar" aria-label="Búsqueda y filtros">
+      <div class="toolbar__left">
+        <div class="search" role="search">
+          <label class="srOnly" for="q">Buscar</label>
+          <svg class="search__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M10.5 3a7.5 7.5 0 1 0 4.63 13.4l3.74 3.73 1.06-1.06-3.73-3.74A7.5 7.5 0 0 0 10.5 3Zm0 1.5a6 6 0 1 1 0 12 6 6 0 0 1 0-12Z"/>
+          </svg>
+
+          <input
+            id="q"
+            class="search__input"
+            type="search"
+            placeholder="Buscar: sede, hogar, virtual, paquete 24, vacacional, preuniversitario…"
+            autocomplete="off"
+            inputmode="search"
+          />
+
+          <button class="search__clear" id="btnClear" type="button" aria-label="Limpiar búsqueda">×</button>
+        </div>
+
+        <!-- Filtros colapsables -->
+        <details class="filtersPanel" id="filtersPanel">
+          <summary>
+            <span>Filtrar por servicio</span>
+            <span class="filtersPanel__hint">Abrir / cerrar</span>
+          </summary>
+          <div class="filtersPanel__body">
+            <div class="filters" id="filters" aria-label="Filtros por servicio"></div>
+          </div>
+        </details>
+      </div>
+
+      <aside class="help" aria-label="Guía de uso">
+        <div class="help__title">Guía de uso</div>
+        <ol class="help__list">
+          <li>Escribe en <b>Buscar</b> para filtrar (por ejemplo: “Hogar”, “12 clases”, “Preuniversitario”).</li>
+          <li>Orden de lectura: <b>Servicio</b> → <b>Paquete/Cantidad</b> → <b>Valor</b> → <b>Descripción</b>.</li>
+          <li>Para compartir o archivar, usa <b>Imprimir / PDF</b>.</li>
+        </ol>
+      </aside>
+    </section>
+
+    <!-- NOTA -->
+    <section class="notice" id="notice" aria-live="polite">
+      <div class="notice__title">📌 Nota</div>
+      <div class="notice__text" id="noteText">Cargando información…</div>
+    </section>
+
+    <!-- TABLA PRINCIPAL -->
+    <section class="tableSection" aria-label="Tabla de precios">
+      <div class="tableTop">
+        <div class="tableTop__left">
+          <h2 class="sectionTitle">Tabla de precios</h2>
+          <div class="sectionHint">Pasa el cursor sobre una fila para resaltarla.</div>
+        </div>
+
+        <div class="tableTop__right">
+          <div class="miniStatus" id="miniStatus" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <div class="tableWrap" role="region" aria-label="Tabla desplazable" tabindex="0">
+        <table class="priceTable" id="priceTable">
+          <thead>
+            <tr>
+              <th style="width: 22%">Servicio</th>
+              <th style="width: 20%">Paquete / Cantidad</th>
+              <th style="width: 14%; text-align:right">Valor</th>
+              <th style="width: 44%">Descripción</th>
+            </tr>
+          </thead>
+
+          <tbody id="tblBody">
+            <tr class="skeletonRow">
+              <td colspan="4">Cargando precios…</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tableFoot">
+        <div class="tableFoot__left">
+          <span class="footNote">Valores en COP.</span>
+        </div>
+        <div class="tableFoot__right">
+          <button class="btn btn--soft" id="btnReset" type="button" hidden>Ver todo</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="wrap footer">
+    <div class="footer__left">
+      <div class="footer__tiny">Musicala · Carrera 45A #103B-34 · Bogotá</div>
+      <div class="footer__tiny footer__muted">Página de consulta para administrativos FESICOL.</div>
+    </div>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>

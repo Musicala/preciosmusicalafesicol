@@ -1,0 +1,180 @@
+{
+  "meta": {
+    "title": "Precios FESICOL · Musicala",
+    "subtitle": "Servicios, descripción y precios 2026 (consulta rápida)",
+    "period": "2026",
+    "updated_at": "2026-01-19",
+    "currency": "COP",
+    "theme": {
+      "primary": "#0C41C4",
+      "secondary": "#220A63",
+      "accent": "#CE0071"
+    }
+  },
+  "note": "📌 Estas tarifas aplican para cursos de Música, Danza, Teatro y Artes Plásticas (según modalidad y paquete). Si alguien se enreda: 1) elige el SERVICIO (Sede/Hogar/Virtual/Online), 2) elige la OPCIÓN (paquete/mes/programa), 3) usa ese valor.",
+  "services": [
+    {
+      "id": "sede_personalizado",
+      "title": "Sede Personalizado",
+      "match": "^Sede Personalizado",
+      "desc": "Clases individuales de música (cualquier instrumento), danzas (latino, urbano, ballet, contemporáneo), artes plásticas (dibujo, pintura, escultura) y teatro. En sede: Carrera 45A #103B-34, Bogotá."
+    },
+    {
+      "id": "musifamiliar_sede_grupal",
+      "title": "Musifamiliar Sede Grupal",
+      "match": "^Musifamiliar Sede Grupal",
+      "desc": "Misma oferta artística, pero una misma clase puede ser de 2 a 6 personas (familia, amigos o conocidos). El valor es el mismo dentro de ese rango."
+    },
+    {
+      "id": "sede_grupal",
+      "title": "Sede Grupal",
+      "match": "^Sede Grupal",
+      "desc": "Clases grupales en sede (hasta 6 personas por grupo) para música, danzas, artes plásticas y teatro."
+    },
+    {
+      "id": "ensambles",
+      "title": "Ensambles",
+      "match": "^Ensambles",
+      "desc": "Para quienes ya tienen un nivel y quieren participar en la creación de ensambles (pop, rock, latino, entre otros)."
+    },
+    {
+      "id": "musigym",
+      "title": "Musigym",
+      "match": "^Musigym",
+      "desc": "Como un gimnasio: reservas tu espacio de entrenamiento y vienes a practicar música, danza o artes plásticas."
+    },
+    {
+      "id": "hogar_personalizado",
+      "title": "Hogar Personalizado",
+      "match": "^Hogar Personalizado",
+      "desc": "Todas las artes, pero en tu casa o el lugar que prefieras. Nosotros vamos hasta allá."
+    },
+    {
+      "id": "hogar_musifamiliar",
+      "title": "Hogar Musifamiliar Grupal",
+      "match": "^Hogar Musifamiliar Grupal",
+      "desc": "En tu casa, con tu familia/amigos: de 2 a 6 personas. El valor es el mismo dentro de ese rango."
+    },
+    {
+      "id": "virtual_personalizado",
+      "title": "Virtual Personalizado",
+      "match": "^Virtual Personalizado",
+      "desc": "Clases virtuales individuales en vivo con profe, para todas las artes."
+    },
+    {
+      "id": "virtual_grupal",
+      "title": "Virtual Grupal",
+      "match": "^Virtual Grupal",
+      "desc": "Clases virtuales en vivo en grupos de 2 a 6 personas. El valor es el mismo dentro de ese rango."
+    },
+    {
+      "id": "plataforma_online",
+      "title": "Plataforma Online",
+      "match": "^Plataforma Online",
+      "desc": "Suscripción a nuestra plataforma online con cursos de todas las artes."
+    },
+    {
+      "id": "preu_personalizado",
+      "title": "Curso Preuniversitario Personalizado",
+      "match": "^Curso Preuniversitario Personalizado",
+      "desc": "Preparación preuniversitaria para entrar a la U en artes (música, danzas o teatro). Clases individuales."
+    },
+    {
+      "id": "preu_grupal",
+      "title": "Curso Preuniversitario Grupal",
+      "match": "^Curso Preuniversitario Grupal",
+      "desc": "Preparación preuniversitaria en grupos de 2 a 6 personas."
+    },
+    {
+      "id": "formacion_27",
+      "title": "Curso de Formación (9 semanas · 27 clases)",
+      "match": "^Curso de formacion 9 semanas - 27 clases|^Curso de formación 9 semanas - 27 clases",
+      "desc": "Cursos específicos para quienes quieren algo más que un hobby. Para música y artes plásticas."
+    },
+    {
+      "id": "formacion_36",
+      "title": "Curso de Formación (9 semanas · 36 clases)",
+      "match": "^Curso de formacion 9 semanas - 36 clases|^Curso de formación 9 semanas - 36 clases",
+      "desc": "Mismo enfoque formativo, pensado para danzas y edades entre 4 a 11 años."
+    },
+    {
+      "id": "vacacional",
+      "title": "Curso Vacacional",
+      "match": "^Curso Vacacional",
+      "desc": "Cursos en semanas de receso con precios especiales. Jornadas de 4 horas diarias. Todas las artes y más."
+    },
+    {
+      "id": "taller_empresarial",
+      "title": "Taller empresarial",
+      "match": "^Taller empresarial",
+      "desc": "Talleres y clases enfocadas en empresas (bienestar, cultura, actividades artísticas para equipos)."
+    }
+  ],
+  "prices": [
+    { "service_label": "Sede Personalizado Paquete de 4 clases", "price_cop": 296000, "price_label": "$ 296.000" },
+    { "service_label": "Sede Personalizado Paquete de 8 clases", "price_cop": 560000, "price_label": "$ 560.000" },
+    { "service_label": "Sede Personalizado Paquete de 12 clases", "price_cop": 796000, "price_label": "$ 796.000" },
+    { "service_label": "Sede Personalizado Paquete de 24 clases", "price_cop": 1502000, "price_label": "$ 1.502.000" },
+
+    { "service_label": "Musifamiliar Sede Grupal Paquete de 4 clases", "price_cop": 374000, "price_label": "$ 374.000" },
+    { "service_label": "Musifamiliar Sede Grupal Paquete de 8 clases", "price_cop": 712000, "price_label": "$ 712.000" },
+    { "service_label": "Musifamiliar Sede Grupal Paquete de 12 clases", "price_cop": 1010000, "price_label": "$ 1.010.000" },
+    { "service_label": "Musifamiliar Sede Grupal Paquete de 24 clases", "price_cop": 1908000, "price_label": "$ 1.908.000" },
+
+    { "service_label": "Sede Grupal Paquete de 4 clases", "price_cop": 160000, "price_label": "$ 160.000" },
+    { "service_label": "Sede Grupal Paquete de 8 clases", "price_cop": 304000, "price_label": "$ 304.000" },
+    { "service_label": "Sede Grupal Paquete de 12 clases", "price_cop": 432000, "price_label": "$ 432.000" },
+    { "service_label": "Sede Grupal Paquete de 24 clases", "price_cop": 810000, "price_label": "$ 810.000" },
+
+    { "service_label": "Ensambles Paquete de 4 clases", "price_cop": 80000, "price_label": "$ 80.000" },
+    { "service_label": "Ensambles Paquete de 8 clases", "price_cop": 139000, "price_label": "$ 139.000" },
+    { "service_label": "Ensambles Paquete de 12 clases", "price_cop": 197000, "price_label": "$ 197.000" },
+    { "service_label": "Ensambles Paquete de 24 clases", "price_cop": 372000, "price_label": "$ 372.000" },
+
+    { "service_label": "Musigym 1 mes", "price_cop": 158000, "price_label": "$ 158.000" },
+    { "service_label": "Musigym 2 meses", "price_cop": 306000, "price_label": "$ 306.000" },
+    { "service_label": "Musigym 3 meses", "price_cop": 454000, "price_label": "$ 454.000" },
+    { "service_label": "Musigym 6 meses", "price_cop": 914000, "price_label": "$ 914.000" },
+
+    { "service_label": "Hogar Personalizado Paquete de 4 clases", "price_cop": 354000, "price_label": "$ 354.000" },
+    { "service_label": "Hogar Personalizado Paquete de 8 clases", "price_cop": 672000, "price_label": "$ 672.000" },
+    { "service_label": "Hogar Personalizado Paquete de 12 clases", "price_cop": 954000, "price_label": "$ 954.000" },
+    { "service_label": "Hogar Personalizado Paquete de 24 clases", "price_cop": 1802000, "price_label": "$ 1.802.000" },
+
+    { "service_label": "Hogar Musifamiliar Grupal Paquete de 4 clases", "price_cop": 412000, "price_label": "$ 412.000" },
+    { "service_label": "Hogar Musifamiliar Grupal Paquete de 8 clases", "price_cop": 784000, "price_label": "$ 784.000" },
+    { "service_label": "Hogar Musifamiliar Grupal Paquete de 12 clases", "price_cop": 1114000, "price_label": "$ 1.114.000" },
+    { "service_label": "Hogar Musifamiliar Grupal Paquete de 24 clases", "price_cop": 2102000, "price_label": "$ 2.102.000" },
+
+    { "service_label": "Virtual Personalizado Paquete de 4 clases", "price_cop": 266000, "price_label": "$ 266.000" },
+    { "service_label": "Virtual Personalizado Paquete de 8 clases", "price_cop": 504000, "price_label": "$ 504.000" },
+    { "service_label": "Virtual Personalizado Paquete de 12 clases", "price_cop": 716000, "price_label": "$ 716.000" },
+    { "service_label": "Virtual Personalizado Paquete de 24 clases", "price_cop": 1352000, "price_label": "$ 1.352.000" },
+
+    { "service_label": "Virtual Grupal Paquete de 4 clases", "price_cop": 324000, "price_label": "$ 324.000" },
+    { "service_label": "Virtual Grupal Paquete de 8 clases", "price_cop": 616000, "price_label": "$ 616.000" },
+    { "service_label": "Virtual Grupal Paquete de 12 clases", "price_cop": 876000, "price_label": "$ 876.000" },
+    { "service_label": "Virtual Grupal Paquete de 24 clases", "price_cop": 1652000, "price_label": "$ 1.652.000" },
+
+    { "service_label": "Plataforma Online 1 mes", "price_cop": 52000, "price_label": "$ 52.000" },
+    { "service_label": "Plataforma Online 2 meses", "price_cop": 102000, "price_label": "$ 102.000" },
+    { "service_label": "Plataforma Online 3 meses", "price_cop": 150000, "price_label": "$ 150.000" },
+    { "service_label": "Plataforma Online 6 meses", "price_cop": 302000, "price_label": "$ 302.000" },
+    { "service_label": "Plataforma Online 12 meses", "price_cop": 428000, "price_label": "$ 428.000" },
+
+    { "service_label": "Curso Preuniversitario Personalizado 9 semanas - 54 clases", "price_cop": 1988000, "price_label": "$ 1.988.000" },
+    { "service_label": "Curso Preuniversitario Grupal 9 semanas - 54 clases", "price_cop": 1590000, "price_label": "$ 1.590.000" },
+
+    { "service_label": "Curso de formacion 9 semanas - 27 clases", "price_cop": 636000, "price_label": "$ 636.000" },
+    { "service_label": "Curso de formacion 9 semanas - 36 clases", "price_cop": 690000, "price_label": "$ 690.000" },
+
+    { "service_label": "Curso Vacacional 1 semana - 20 horas", "price_cop": 368000, "price_label": "$ 368.000" },
+    { "service_label": "Curso Vacacional 1 semana - 16 horas", "price_cop": 296000, "price_label": "$ 296.000" },
+
+    { "service_label": "Taller empresarial Clase individual", "price_cop": 106000, "price_label": "$ 106.000" },
+    { "service_label": "Taller empresarial Paquete de 4 clases", "price_cop": 384000, "price_label": "$ 384.000" },
+    { "service_label": "Taller empresarial Paquete de 8 clases", "price_cop": 728000, "price_label": "$ 728.000" },
+    { "service_label": "Taller empresarial Paquete de 12 clases", "price_cop": 1034000, "price_label": "$ 1.034.000" },
+    { "service_label": "Taller empresarial Paquete de 24 clases", "price_cop": 1952000, "price_label": "$ 1.952.000" }
+  ]
+}
